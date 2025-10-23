@@ -1,0 +1,30 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form" novalidate>
+  <label>Ім'я</label>
+  <input formControlName="firstName" />
+  <div *ngIf="form.controls['firstName'].invalid && form.controls['firstName'].touched">
+    Некоректне ім'я.
+  </div>
+
+  <label>Прізвище</label>
+  <input formControlName="lastName" />
+  <div *ngIf="form.controls['lastName'].invalid && form.controls['lastName'].touched">
+    Некоректне прізвище.
+  </div>
+
+  <label>Дата народження</label>
+  <input type="date" formControlName="birthDate" />
+  <div *ngIf="form.controls['birthDate'].invalid && form.controls['birthDate'].touched">
+    Вкажіть дату.
+  </div>
+
+  <label>Група</label>
+  <input formControlName="groupNumber" />
+  <div *ngIf="form.controls['groupNumber'].invalid && form.controls['groupNumber'].touched">
+    Номер групи повинен бути числом 0-999.
+  </div>
+
+  <div style="color: red">{{ errorMessage }}</div>
+
+  <button type="submit">{{ editingStudent ? 'Зберегти зміни' : 'Додати' }}</button>
+  <button type="button" (click)="onCancel()" *ngIf="editingStudent">Скасувати</button>
+</form>

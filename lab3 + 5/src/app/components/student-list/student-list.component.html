@@ -1,0 +1,15 @@
+<app-student-form
+  [editingStudent]="editingStudent"
+  (save)="onSave($event)"
+  (cancel)="onCancel()">
+</app-student-form>
+
+<div *ngIf="students.length === 0">Список студентів порожній.</div>
+
+<div *ngFor="let s of students">
+  <app-student-block
+    [student]="s"
+    (edit)="startEdit(s)"
+    (delete)="delete(s.id)">
+  </app-student-block>
+</div>

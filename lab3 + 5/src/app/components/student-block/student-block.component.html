@@ -1,0 +1,12 @@
+<div class="student">
+  <div class="student-info">
+    <div><strong>Ім'я:</strong> {{ student.firstName }}</div>
+    <div><strong>Прізвище:</strong> {{ student.lastName }}</div>
+    <div><strong>Дата народження:</strong> {{ student.birthDate }}</div>
+    <div><strong>Група:</strong> {{ student.groupNumber }}</div>
+  </div>
+  <div class="student-actions">
+    <button (click)="onEdit()">Редагувати</button>
+    <button (click)="onDelete()">Видалити</button>
+  </div>
+</div>

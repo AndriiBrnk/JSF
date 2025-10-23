@@ -1,0 +1,21 @@
+form {
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  margin-top: 8px;
+}
+input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+button {
+  margin-top: 8px;
+  padding: 6px 10px;
+}
+div[style] {
+  margin-top: 6px;
+}
